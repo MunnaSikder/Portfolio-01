@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personal Portfoilo</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="background">
+
+		<div class="nav">
+			<a class="a active" href="#">HOME</a>
+			<a class="b" href="#">ABOUT ME</a>
+			<a class="c" href="#">GALLERY</a>
+			<a class="d" href="#">CONTACT US</a>
+		</div>
+
+		<div class="content">
+
+			<div class="home">
+				<h1>I am Munna Sikder</h1>
+				<h3>Web Designer</h3>
+			</div>
+
+			<div class="aboutus">
+					<p><b>Hello friends</b>, <br>
+					Welcome to my website.... </p><br>
+
+					<p>Carrier Objectives: <br>
+					To serve in a responsible position are well-structured organization and successfully apply acquired skills and knowledge to enhance organizational efficiencies for the future development.</p> <br>
+
+					<p>Computer Literacy & Inter-Personal Skill:<br>
+					•	Skills in HTML, CSS, Java, Extjs etc.<br>
+					•	Skills in Computer Operation, NTVQF Level- 1<br>
+					•	Skills in IT Support Technician, NTVQF Level- 1<br>
+					•	Ability to adapt in any situation<br>
+					•	Capable to work individual and in a team <br></p>
+					
+					</p>
+			</div>
+
+			<div class="gallery">
+				<div class="image">
+					<img src="images/img1.jpg">
+				</div>
+				<div class="image">
+					<img src="images/img2.jpg">
+				</div>
+				<div class="image">
+					<img src="images/img4.jpg">
+
+				</div>
+				<div class="image">
+					<img src="images/img4.jpg">
+				</div>
+				<div class="image">
+					<img src="images/img2.jpg">
+				</div>
+				<div class="image">
+					<img src="images/img1.jpg">
+				</div>
+			</div>
+
+			<div class="contactus">
+				<div class="contactform">
+					<form action="index.html" method="post">
+						<input type="text" class="inputtext" placeholder="First Name">
+						<input type="text" class="inputtext" placeholder="Last Name">
+						<input type="text" class="inputtext" placeholder="Your Email">
+						<textarea cols="4" class="inputmessage" rows="6" placeholder="Your Message"></textarea>
+						<input type="button" class="submitbutton" value="Submit">
+					</form>
+
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('a').click(function(){
+				// alert("I am click");
+				var selected = $(this);
+				$('a').removeClass('active');
+				$(selected).addClass('active');
+
+			});
+
+			var $a = $('.a'),
+				$b = $('.b'),
+				$c = $('.c'),
+				$d = $('.d'),
+				$home = $('.home'),
+				$aboutus = $('.aboutus'),
+				$gallery = $('.gallery'),
+				$contactus = $('.contactus');
+			
+			$a.click(function(){
+				$home.fadeIn();
+				$aboutus.fadeOut();
+				$gallery.fadeOut();
+				$contactus.fadeOut();
+			});
+			$b.click(function(){
+				$aboutus.fadeIn();
+				$home.fadeOut();
+				$gallery.fadeOut();
+				$contactus.fadeOut();
+			});
+			$c.click(function(){
+				$gallery.fadeIn();
+				$home.fadeOut();
+				$aboutus.fadeOut();				
+				$contactus.fadeOut();
+			});
+			$d.click(function(){
+				$contactus.fadeIn();
+				$home.fadeOut();
+				$gallery.fadeOut();
+				$aboutus.fadeOut();				
+				
+			});
+		});
+	</script>
+	
+</body>
+</html>
